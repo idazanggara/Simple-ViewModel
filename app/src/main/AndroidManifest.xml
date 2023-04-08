@@ -12,10 +12,13 @@
         android:theme="@style/Theme.SimpleViewModel"
         tools:targetApi="31">
         <activity
+            android:name=".CounterActivity"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="false" />
         <activity
-            android:name=".CounterActivity"
+            android:name=".CounterFragmentActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
