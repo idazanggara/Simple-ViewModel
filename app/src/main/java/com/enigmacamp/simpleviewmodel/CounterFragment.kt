@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import com.enigmacamp.simpleviewmodel.databinding.FragmentCounterBinding
 
@@ -14,7 +15,8 @@ class CounterFragment : Fragment() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         // disini dia ngesetViewnya, jadi viewModel ditaroh di onCreate lebih recomended
-        viewModel = ViewModelProvider(requireActivity())[CounterVM::class.java] //
+//        viewModel = ViewModelProvider(requireActivity())[CounterVM::class.java] //
+        initViewModel()
     }
 
     override fun onCreateView(
@@ -38,6 +40,14 @@ class CounterFragment : Fragment() {
                 textViewCounter.text = viewModel.counterVm.toString()
             }
         }
+    }
+
+    private fun initViewModel() {
+        viewModel = ViewModelProvider(this, object : ViewModelProvider.Factory{
+            override fun <T : ViewModel> create(modelClass: Class<T>): T {
+                return CounterVM() as T
+            }
+        })[CounterVM::class.java]
     }
 
     companion object {
