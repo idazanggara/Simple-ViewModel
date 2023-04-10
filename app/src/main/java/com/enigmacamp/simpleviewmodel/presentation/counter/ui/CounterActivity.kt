@@ -1,8 +1,9 @@
-package com.enigmacamp.simpleviewmodel
+package com.enigmacamp.simpleviewmodel.presentation.counter.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.lifecycle.ViewModelProvider
+import com.enigmacamp.simpleviewmodel.presentation.counter.CounterVM
 import com.enigmacamp.simpleviewmodel.databinding.ActivityCounterBinding
 
 class CounterActivity : AppCompatActivity() {

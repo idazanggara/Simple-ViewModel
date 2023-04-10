@@ -2,6 +2,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -12,13 +16,22 @@
         android:theme="@style/Theme.SimpleViewModel"
         tools:targetApi="31">
         <activity
-            android:name=".CounterActivity"
+            android:name=".SharedPreferenceActivity"
+            android:exported="false" />
+        <activity
+            android:name=".presentation.transaction.ui.TransactionActivity"
+            android:exported="false" />
+        <activity
+            android:name=".presentation.counter.ui.CounterFragmentActivity"
+            android:exported="false" />
+        <activity
+            android:name=".presentation.counter.ui.CounterActivity"
             android:exported="false" />
         <activity
             android:name=".MainActivity"
             android:exported="false" />
         <activity
-            android:name=".CounterFragmentActivity"
+            android:name=".presentation.camera.ui.CameraActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

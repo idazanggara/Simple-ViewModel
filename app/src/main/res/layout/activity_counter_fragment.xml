@@ -3,11 +3,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".CounterFragmentActivity">
+    tools:context=".presentation.counter.ui.CounterFragmentActivity">
 
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/fragmentContainerView"
-        android:name="com.enigmacamp.simpleviewmodel.CounterFragment"
+        android:name="com.enigmacamp.simpleviewmodel.presentation.counter.ui.CounterFragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:layout_editor_absoluteX="267dp"

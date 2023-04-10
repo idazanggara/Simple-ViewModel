@@ -1,4 +1,4 @@
-package com.enigmacamp.simpleviewmodel
+package com.enigmacamp.simpleviewmodel.presentation.counter
 
 import androidx.lifecycle.ViewModel
 
